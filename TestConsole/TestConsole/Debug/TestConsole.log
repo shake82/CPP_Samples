@@ -1,43 +1,16 @@
-﻿Build started 9/18/2014 10:47:03 PM.
+﻿Build started 9/23/2014 12:03:58 AM.
      1>Project "D:\git\CPP_Samples\TestConsole\TestConsole\TestConsole.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\TestConsole.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ArrayPointerTest.cpp TestConsole.cpp
-         ArrayPointerTest.cpp
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(73): warning C4227: anachronism used : qualifiers on reference are ignored
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(88): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(119): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(133): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(142): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(153): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(162): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(171): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(199): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(323): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(421): warning C4018: '<' : signed/unsigned mismatch
-                 d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(413) : while compiling class template member function 'ArrayPointerTest::TemplateVector<std::string> ArrayPointerTest::TemplateVector<std::string>::operator +(const ArrayPointerTest::TemplateVector<std::string> &)'
-                 d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(211) : see reference to function template instantiation 'ArrayPointerTest::TemplateVector<std::string> ArrayPointerTest::TemplateVector<std::string>::operator +(const ArrayPointerTest::TemplateVector<std::string> &)' being compiled
-                 d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(169) : see reference to class template instantiation 'ArrayPointerTest::TemplateVector<std::string>' being compiled
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(2132): warning C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(2113) : see declaration of 'std::_Copy_impl'
-                 d:\git\cpp_samples\testconsole\testconsole\arraypointertest.cpp(240) : see reference to function template instantiation '_OutIt std::copy<const _Elem*,double*>(_InIt,_InIt,_OutIt)' being compiled
-                 with
-                 [
-                     _OutIt=double *
-         ,            _Elem=double
-         ,            _InIt=const double *
-                 ]
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(2113) : see declaration of 'std::_Copy_impl'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(2113) : see declaration of 'std::_Copy_impl'
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         TestConsole.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\TestConsole.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StreamTest.cpp
+         StreamTest.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\git\CPP_Samples\TestConsole\Debug\TestConsole.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\git\CPP_Samples\TestConsole\Debug\TestConsole.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\git\CPP_Samples\TestConsole\Debug\TestConsole.lib" /MACHINE:X86 Debug\ArrayPointerTest.obj
          Debug\stdafx.obj
+         Debug\StreamTest.obj
          Debug\TestConsole.obj
          TestConsole.vcxproj -> D:\git\CPP_Samples\TestConsole\Debug\TestConsole.exe
      1>Done Building Project "D:\git\CPP_Samples\TestConsole\TestConsole\TestConsole.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.77
+Time Elapsed 00:00:00.66

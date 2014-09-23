@@ -176,19 +176,6 @@ namespace ArrayPointerTest
 
 
 		cout << "Vector Sum Test";
-		/*TemplateVector<std::string> v_str1 = { "Hello", "World" };
-		TemplateVector<std::string> v_str2 = { ":HI", ":ASDF" };*/
-
-		//TemplateVector<int> v_str1 = { 1,2 };
-		//TemplateVector<int> v_str2 = { 3,4 };
-
-		////TemplateVector<std::string> v_str3 =
-		//	v_str1 + v_str2;
-		///*for (size_t i = 0; i < v_str3.getSize(); i++)
-		//{
-		//	cout << v_str3[i] << ", ";
-		//}
-		//cout << endl;*/
 
 		cout << "add and move test: ";
 
@@ -217,6 +204,91 @@ namespace ArrayPointerTest
 		cout << endl;
 	}
 
+
+	template<typename C, typename F>
+	int conditionalCount(C& const container, F& func)
+	{
+		int count = 0;
+		for (auto val : container)
+		{
+			if (func(val))
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+
+	template<typename T>
+	void countTemplateVectorItems(TemplateVector<T> v)
+	{
+		cout << "Get all values greater than (" << *v.begin() << " - " << *(v.end() - 1) << "): ";
+		T mid;
+		cin >> mid;
+		auto count = conditionalCount(v, [&](const T a){ return a > mid; });
+		cout << "Count: " << count << endl;
+	}
+
+	void LambdaTest()
+	{
+		TemplateVector<int> v_int = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		TemplateVector<string> v_str = { "Alpha", "beta", "gamma", "delta" };
+
+		countTemplateVectorItems(v_int);
+		countTemplateVectorItems(v_str);
+	}
+
+	template<typename T>
+	void g(T val)
+	{
+		cout <<"current: "<< val << " - ";
+	}
+
+	void f() { } // do nothing
+
+	template<typename T, typename ... Tail>
+	void f(T head, Tail... tail)
+	{
+
+		g(head); // do something to head
+		cout << "sizeof tail: " << sizeof...(tail) << endl;
+		f(tail...); // tr y again with tail
+	}
+
+	template<typename T>
+	T sum(T& val)
+	{
+		return val;
+	}
+
+	template<typename T, typename ... Tail>
+	T sum(T head, Tail... tail)
+	{
+
+		return head + sum(tail...);
+	}
+
+
+	void VariadicTest()
+	{
+		f(1, 2, 3, 4, 5, 6);
+		cout <<endl;
+
+		cout << "sum: " << sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) << endl;
+
+		string str1 = "Goodbye";
+		string str2 = "Cruel";
+		string str3 = "World";
+
+		cout << "sum: " << sum(string("Goodbye"), string(" "), string("Cruel"), string(" "), string("World")) << endl;
+
+		cout << "sum: " << sum(str1, str2, str3) << endl;
+
+		/*sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);*/
+		//cout << "Integer Sum: " << f(1, 2, 3, 4, 5, 6) << endl;
+
+		//cout << "String Sum: " << VariadicSum('A', 'B' , 'C' , 'D' , 'E') << endl;
+	}
 
 	
 	#pragma  region Vector Implementation

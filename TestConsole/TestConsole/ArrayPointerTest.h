@@ -3,6 +3,8 @@ namespace ArrayPointerTest
 	void MainTest();
 	void CountCharTest();
 	void CustomVectorTest();
+	void LambdaTest();
+	void VariadicTest();
 
 	class MyVector
 	{
