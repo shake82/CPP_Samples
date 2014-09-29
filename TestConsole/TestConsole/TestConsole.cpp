@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "ArrayPointerTest.h"
 #include "StreamTest.h"
-
+#include "ConcurrencyTest.h"
 
 using namespace std;
 
@@ -21,10 +21,23 @@ int main(int argc, char* argv[])
 	ArrayPointerTest::LambdaTest();
 		
 		4)Variadic Test
-		ArrayPointerTest::VariadicTest();
+	ArrayPointerTest::VariadicTest();
+
+		5) 
+	StreamTest::UserDefinedClassIOTest();
+		
+		6) Iterator Test 
+	StreamTest::IteratorTest();
+		
+		7) Concurrency Test
+	ConcurrencyTest::SimpleThreadingTest();
+	ConcurrencyTest::MutextProducerConsumerTest();
+	ConcurrencyTest::PromiseTest();
+	ConcurrencyTest::PackagedTaskTest();
+	ConcurrencyTest::PackagedTaskLambdaTest();
 	*/
 	
-	StreamTest::UserDefinedClassIOTest();
-	
+	ConcurrencyTest::asyncTest();
+
 }
 

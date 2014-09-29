@@ -6,6 +6,7 @@ namespace StreamTest
 {
 	//Tests
 	void UserDefinedClassIOTest();
+	void IteratorTest();
 
 	//Classes
 	struct Data

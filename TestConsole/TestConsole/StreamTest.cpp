@@ -1,6 +1,8 @@
 
 #include "stdafx.h"
 #include "StreamTest.h"
+#include <fstream>
+#include <algorithm>
 
 namespace StreamTest
 {
@@ -39,8 +41,58 @@ namespace StreamTest
 			}
 		}
 
+		vector<Data> v_data = {
+			{ 1, "First" },
+			{ 2, "Second" },
+			{ 3, "Third" },
+		};
+
+		for (const auto& d : v_data)
+		{
+			cout << d << endl;
+		}
+
 	}
 
+	void IteratorTest()
+	{
+		/*
+		ostream_iterator<string> oi{ cout };
+	
+		*oi = "Hello";
+		//++oi;
+
+		*oi = " World\n";
+
+		istream_iterator<string> ii{ cin };
+		*/
+
+		string from, to;
+
+		cin >> from >> to;
+
+		cout << from << " -> " << to << endl;
+
+		ifstream is{ from };
+		istream_iterator<string> ii{ is };
+		istream_iterator<string> eos{};
+
+		ofstream os{ to };
+		ostream_iterator<string> oi{ os, "\n" };
+
+		vector<string> v_lines{ ii, eos };
+
+		sort(v_lines.begin(), v_lines.end());
+
+		unique_copy(v_lines.begin(), v_lines.end(), oi);
+		
+		/* Better way
+		//unique sorted container
+		set<string> b {istream_iterator<string>{ii},istream_iterator<string>{}}; // read input
+		
+		copy(b.begin(),b.end(),ostream_iterator<string>{oi,"\n"});
+		*/
+	}
 
 	ostream& operator << (ostream& os, const Data& data)
 	{
